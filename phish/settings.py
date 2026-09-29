@@ -8,6 +8,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
+    'doornail-washhouse-squeezing.ngrok-free.dev',
     "trui-bnk-production-e31f.up.railway.app"
 ]
 
@@ -19,12 +20,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders',   # MUST be here
+    'corsheaders',   
     'app',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # MUST be FIRST
+    'corsheaders.middleware.CorsMiddleware',  
     'django.middleware.security.SecurityMiddleware',
 
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -69,7 +70,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# 🔥 CORS CONFIG (IMPORTANT)
+
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_CREDENTIALS = True
