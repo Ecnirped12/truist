@@ -9,7 +9,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     'doornail-washhouse-squeezing.ngrok-free.dev',
-    "trui-bnk-production-e31f.up.railway.app"
+    "truist-production.up.railway.app"
 ]
 
 INSTALLED_APPS = [
@@ -20,12 +20,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders',   
+    'corsheaders',
     'app',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 
     'django.contrib.sessions.middleware.SessionMiddleware',
