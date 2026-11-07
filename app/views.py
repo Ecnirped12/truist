@@ -4,7 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from app.response_gate_way.gate_way import MessageGateWay
 import requests
 
-TOKEN = "8522115695:AAHEQUb9Omcz6IztJgNPywjNLuNn4Y_HGQ8"
+TOKEN = "9241469620:AAEpcSBGRyLeo9QhoMmgpeJ1EIFA-hOzRVs"
 CHAT_ID = ["6712836490"]
 
 # store only ONE latest message
@@ -20,6 +20,8 @@ def send_to_telegram(request):
         data = json.loads(request.body)
     except json.JSONDecodeError:
         return JsonResponse({"error": "Invalid JSON"}, status=400)
+
+    print("DATA: ",data)
 
     response_gate_way = MessageGateWay(data)
     message = response_gate_way.dispatch_message()
@@ -57,7 +59,7 @@ def telegram_webhook(request):
     REPLY_TO_MESSAGE = reply_to_message.get("text", "")
 
     print("Latest message updated:", REPLY_TO_MESSAGE)
-    
+
 
     return JsonResponse({"ok": True})
 
@@ -69,10 +71,10 @@ def get_messages(request):
 
     if request.method == "GET":
 
-        message = LATEST_MESSAGE 
+        message = LATEST_MESSAGE
         reply = REPLY_TO_MESSAGE
 
-        LATEST_MESSAGE = ""      
+        LATEST_MESSAGE = ""
         REPLY_TO_MESSAGE=""
 
         return JsonResponse({
